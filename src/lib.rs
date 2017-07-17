@@ -1,3 +1,12 @@
+
+//! [![Build Status](https://travis-ci.org/lawliet89/unicase_serde.svg)](https://travis-ci.org/lawliet89/unicase_serde)
+//! [![Dependency Status](https://dependencyci.com/github/lawliet89/unicase_serde/badge)]
+//! (https://dependencyci.com/github/lawliet89/unicase_serde)
+//! [![Crates.io](https://img.shields.io/crates/v/unicase_serde.svg)](https://crates.io/crates/unicase_serde)
+//! [![Repository](https://img.shields.io/github/tag/lawliet89/unicase_serde.svg)](https://github.com/lawliet89/unicase_serde)
+//! [![Documentation](https://docs.rs/unicase_serde/badge.svg)](https://docs.rs/unicase_serde)
+//!
+//! - Documentation:  [stable](https://docs.rs/unicase_serde/) | [master branch](https://lawliet89.github.io/unicase_serde)
 //! serde Serialization and Deserialization for [UniCase](https://crates.io/crates/unicase) crate
 //!
 //! Support for serialization and deserialization using
