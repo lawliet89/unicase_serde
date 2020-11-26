@@ -1,4 +1,3 @@
-
 //! [![Build Status](https://travis-ci.org/lawliet89/unicase_serde.svg)](https://travis-ci.org/lawliet89/unicase_serde)
 //! [![Crates.io](https://img.shields.io/crates/v/unicase_serde.svg)](https://crates.io/crates/unicase_serde)
 //! [![Repository](https://img.shields.io/github/tag/lawliet89/unicase_serde.svg)](https://github.com/lawliet89/unicase_serde)
@@ -197,9 +196,9 @@ pub mod unicase {
     use std::marker::PhantomData;
     use std::str::FromStr;
 
-    use unicase_lib::UniCase;
-    use serdelib::{Serializer, Deserializer};
     use serdelib::de;
+    use serdelib::{Deserializer, Serializer};
+    use unicase_lib::UniCase;
 
     /// Straightforward Serialization for UniCase
     pub fn serialize<S, Ser>(value: &UniCase<S>, serializer: Ser) -> Result<Ser::Ok, Ser::Error>
@@ -240,8 +239,8 @@ pub mod unicase {
         //! Serialization and Deserialization Implementation for `UniCase` that borrow data.
         //!
         //! See crate level documentation for details.
-        use super::*;
         pub use super::serialize;
+        use super::*;
 
         /// Borrowed Deserializer for `UniCase`.
         ///
@@ -282,9 +281,9 @@ pub mod ascii {
     use std::marker::PhantomData;
     use std::str::FromStr;
 
-    use unicase_lib::Ascii;
-    use serdelib::{Serializer, Deserializer};
     use serdelib::de;
+    use serdelib::{Deserializer, Serializer};
+    use unicase_lib::Ascii;
 
     /// Straightforward Serialization for UniCase
     pub fn serialize<S, Ser>(value: &Ascii<S>, serializer: Ser) -> Result<Ser::Ok, Ser::Error>
@@ -325,8 +324,8 @@ pub mod ascii {
         //! Serialization and Deserialization Implementation for `Ascii` that borrows data
         //!
         //! See crate level documentation for details.
-        use super::*;
         pub use super::serialize;
+        use super::*;
 
         /// Borrowed Deserializer for `Ascii`.
         ///
@@ -363,8 +362,8 @@ pub mod ascii {
 mod tests {
     use std::borrow::Cow;
 
-    use serde_test::{Token, assert_tokens};
-    use unicase_lib::{UniCase, Ascii};
+    use serde_test::{assert_tokens, Token};
+    use unicase_lib::{Ascii, UniCase};
 
     #[derive(Eq, PartialEq, Debug, Serialize, Deserialize)]
     struct TestUniCase<'a> {
